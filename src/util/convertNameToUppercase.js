@@ -1,5 +1,5 @@
 /**
- * returns a given name in uppercase
+ * Returns a given name in uppercase
  * @param {*} name the name to convert
  */
 function convertNameToUppercase(name) {

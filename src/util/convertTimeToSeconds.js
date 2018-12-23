@@ -7,7 +7,7 @@ const SECONDS_PER_MINUTE = 60;
 const SECONDS_PER_HOUR = SECONDS_PER_MINUTE * MINUTES_PER_HOUR;
 
 /**
- * 
+ * Returns a given time as a floating point value in seconds
  * @param {*} timeString -- a time string of format HH:MM:SS.ms, eg `1:32:33.123`
  */
 function convertTimeToSeconds(timeString) {

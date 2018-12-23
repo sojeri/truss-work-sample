@@ -1,9 +1,9 @@
 const assert = require('assert');
 const sinon = require('sinon');
-const convertCsvFile = require('../src/convertCsvFile');
+const normalizeCsvFile = require('../src/normalizeCsvFile');
 const log = require('../src/util/log');
 
-describe('convertCsvFile()', () => {
+describe('normalizeCsvFile()', () => {
     let headers = 'Timestamp,Address,ZIP,FullName,FooDuration,BarDuration,TotalDuration,Notes';
     let goodLine = '12/31/16 11:59:59 PM,"a place",1,name,1:23:32.1,1:32:33.1,words,more words';
     let badLine = 'invalid line';
@@ -28,7 +28,7 @@ describe('convertCsvFile()', () => {
 
         // act
         let twoLineInput = `${headers}\n${goodLine}\n${goodLine}`;
-        convertCsvFile(twoLineInput, assertThenCleanupCallback);
+        normalizeCsvFile(twoLineInput, assertThenCleanupCallback);
     });
 
     it('continues processing after hitting a bad line', (done) => {
@@ -52,6 +52,6 @@ describe('convertCsvFile()', () => {
 
         // act
         let badLineInput = `${headers}\n${goodLine}\n${badLine}\n${goodLine}`;
-        convertCsvFile(badLineInput, assertThenCleanupCallback);
+        normalizeCsvFile(badLineInput, assertThenCleanupCallback);
     });
 });

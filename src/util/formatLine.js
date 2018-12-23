@@ -1,4 +1,4 @@
-const getConvertedISOTimeString = require('./getConvertedISOTimeString');
+const formatISOTimeString = require('./formatISOTimeString');
 const formatZip = require('./formatZip');
 const convertNameToUppercase = require('./convertNameToUppercase');
 const convertTimeToSeconds = require('./convertTimeToSeconds');
@@ -9,7 +9,7 @@ const convertTimeToSeconds = require('./convertTimeToSeconds');
  * @returns the updated line in CSV format
  */
 function formatLine(line) {
-    let time = getConvertedISOTimeString(line.Timestamp);
+    let time = formatISOTimeString(line.Timestamp);
     let zip = formatZip(line.ZIP);
     let name = convertNameToUppercase(line.FullName);
     let foo = convertTimeToSeconds(line.FooDuration);

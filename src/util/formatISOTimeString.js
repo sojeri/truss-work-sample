@@ -5,10 +5,10 @@ const INPUT_TIMEZONE = { zone: 'America/Los_Angeles' };
 const OUTPUT_TIMEZONE =  'America/New_York';
 
 /**
- * returns an America/New_York ISO-formatted time string based on a given America/Los_Angeles input string
+ * Returns an America/New_York ISO-formatted time string based on a given America/Los_Angeles input string
  * @param {*} pacificTimeString - the time string to convert, eg '10/2/04 8:44:11 AM'
  */
-function getISOTimeString(pacificTimeString) {
+function formatISOTimeString(pacificTimeString) {
     let dateTime = DateTime.fromFormat(
         pacificTimeString,
         STANDARD_FORMAT,
@@ -19,4 +19,4 @@ function getISOTimeString(pacificTimeString) {
     return dateTime.setZone(OUTPUT_TIMEZONE).toISO();
 }
 
-module.exports = getISOTimeString;
+module.exports = formatISOTimeString;
