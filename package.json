@@ -11,7 +11,9 @@
     "bin": {
         "csv-normalize": "src/index.js"
     },
-    "dependencies": {},
+    "dependencies": {
+        "string-format": "^2.0.0"
+    },
     "devDependencies": {
         "mocha": "^5.2.0"
     },
