@@ -1,0 +1,27 @@
+{
+    "name": "csv-normalize",
+    "version": "1.0.0",
+    "description": "A tool that reads a CSV formatted file on stdin and emits a normalized CSV formatted file on stdout.",
+    "main": "src/index.js",
+    "scripts": {
+        "info": "node src --help",
+        "nyan": "node_modules/mocha/bin/_mocha --reporter nyan './{,!(node_modules)/**/}*.test.js'",
+        "test": "node_modules/mocha/bin/_mocha './{,!(node_modules)/**/}*.test.js'"
+    },
+    "bin": {
+        "csv-normalize": "src/index.js"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "mocha": "^5.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sojeri/truss-work-sample.git"
+    },
+    "author": "Jeri Sommers <sojeri@uw.edu>",
+    "bugs": {
+        "url": "https://github.com/sojeri/truss-work-sample/issues"
+    },
+    "homepage": "https://github.com/sojeri/truss-work-sample#readme"
+}
