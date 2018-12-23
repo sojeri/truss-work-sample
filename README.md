@@ -124,6 +124,8 @@ https://stackoverflow.com/questions/44565859/how-does-utf-8-encoding-identify-si
 
 https://en.wikipedia.org/wiki/Specials_(Unicode_block)
 
+https://mathiasbynens.be/notes/javascript-encoding
+
 -->
 
 ### tooling notes

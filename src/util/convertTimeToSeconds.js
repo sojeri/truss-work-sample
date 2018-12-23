@@ -21,7 +21,6 @@ function convertTimeToSeconds(timeString) {
     timeInSeconds += timeParts[2]; // 33.123
 
     return timeInSeconds;
-
 }
 
 module.exports = convertTimeToSeconds;

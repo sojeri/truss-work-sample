@@ -1,10 +1,6 @@
 const assert = require('assert');
 const convertTimeToSeconds = require('../../src/util/convertTimeToSeconds');
 
-// The columns `FooDuration` and `BarDuration` are in HH:MM:SS.MS
-//   format (where MS is milliseconds); please convert them to a floating
-//   point seconds format.
-
 describe('convertTimeToSeconds()', () => {
     it('throws on input that does not match HH:MM:SS[.MS] format', () => {
         assert.throws(() => { convertTimeToSeconds('1pm') });
