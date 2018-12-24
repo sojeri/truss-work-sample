@@ -5,8 +5,8 @@ A tool that reads a CSV formatted file on stdin and emits a normalized CSV forma
 Table of contents:
 - [installing dependencies](#installing-dependencies)
 - [running this utility](#running-this-utility)
-  - [installing globally](#installing-globally)
   - [running without global installation](#running-without-global-installation)
+  - [installing globally](#installing-globally)
 - [running tests](#running-tests)
   - [from command line](#from-command-line)
   - [from recommended IDE (VSCode)](#from-recommended-ide-vscode)
@@ -33,38 +33,25 @@ npm i
 
 ## running this utility
 
+### running without global installation
+
+You can run this utility right from package root with the command:
+```bash
+cat sample.csv | node src
+```
+
+If you run into permission errors, you can try running the getPerms script (`npm run getPerms`). You can also resolve them by installing globally with the following instructions.
+
 ### installing globally
 
-From project root, you can install this package with the command:
+Run this command from project root:
 ```bash
 npm i -g .
 ```
 
-It will then be available for you as:
+The recommended usage is to pipe an input file into the command:
 ```bash
-csv-normalize
-```
-
-For more info about usage, please use command:
-```bash
-csv-normalize --help
-```
-
-### running without global installation
-
-You can also run this utility right from package root with the command:
-```bash
-node src -i sample.csv
-```
-
-For help or to get a full list of options this utility supports, use this command:
-```bash
-node src --help
-```
-
-The help command is also aliased as:
-```bash
-npm run info
+cat sample.csv | csv-normalize
 ```
 
 - - -

@@ -4,7 +4,7 @@
     "description": "A tool that reads a CSV formatted file on stdin and emits a normalized CSV formatted file on stdout.",
     "main": "src/index.js",
     "scripts": {
-        "info": "node src --help",
+        "getPerms": "chmod -x src/index.js",
         "nyan": "node_modules/mocha/bin/_mocha --reporter nyan './{,!(node_modules)/**/}*.test.js'",
         "test": "node_modules/mocha/bin/_mocha './{,!(node_modules)/**/}*.test.js'"
     },

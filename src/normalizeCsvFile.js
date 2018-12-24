@@ -16,7 +16,7 @@ function convertCsvFile(csvFileContents, afterProcessingCb) {
                 try {
                     output.push(formatLine(jsonBlob));
                 } catch (err) {
-                    log.error(err);
+                    log.error(err.message);
                 }
             });
             output.forEach(line => log.info(line));
