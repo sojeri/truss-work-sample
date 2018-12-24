@@ -33,6 +33,8 @@ npm i
 
 ## running this utility
 
+Since I did not test this on an Ubuntu device, I recommend running it on Mac OS. Theoretically, it should work fine on either.
+
 ### running without global installation
 
 You can run this utility right from package root with the command:
@@ -102,6 +104,8 @@ The spec said not to spend more than 4 hours on this exercise. Because I have no
 - Because JavaScript's String implementation is UCS-2 or UTF-16 and the predominant encoding of the web is UTF-8, it already handles automatically for replacing unknown or invalid unicode code points (& bytes representing such) with `\uFFFD`, the unicode replacement character, as part of the engine's on-the-fly UTF-8 <-> UTF-16 conversions.
 
 So I have left the JavaScript engine to handle this part of the spec for me.
+
+In all honesty, if you count my UTF research as part of the 4 hours, then the 4 hour mark was probably closer to [this commit](ed1b8d92d0ccc6545e3602326539bc9fba6c2e72) (ed1b8d92). At that point, all the base handling was in place. However, I had not yet connected the command line to the script. The [last commit](2a52048e1f738d84628d8d78f5e7470e9d63b165) (2a52048e) took another 20-30 minutes of work -- roughly the same as what I had invested in learning about & tasting UTF flavors.
 
 <!--
 
